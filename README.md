@@ -1,7 +1,3 @@
-📈 Stock Broker Client Web Dashboard
-
-A real-time stock monitoring web dashboard that allows users to subscribe to selected stocks and view continuously updating prices without refreshing the page. The application demonstrates real-time UI updates, multi-user simulation, and modern frontend development practices.
-
 🔍 Project Overview
 
 The Stock Broker Client Web Dashboard is a web-based application designed to simulate real-time stock price updates for different users. Each user can log in, subscribe to supported stocks, and observe asynchronous price changes generated dynamically on the client side.
@@ -14,7 +10,15 @@ User login using email authentication
 
 Subscribe to supported stock tickers:
 
-GOOG, TSLA, AMZN, META, NVDA
+GOOG
+
+TSLA
+
+AMZN
+
+META
+
+NVDA
 
 Real-time stock price updates (every second)
 
