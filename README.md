@@ -1,67 +1,129 @@
-# StockTracker Pro - Stock Broker Dashboard
+# 📈 Stock Broker Client Web Dashboard
 
-A real-time stock monitoring dashboard that allows users to subscribe to and track their favorite stocks.
+A real-time stock monitoring web dashboard that allows users to subscribe to selected stocks and view continuously updating prices without refreshing the page. The application demonstrates real-time UI updates, multi-user simulation, and modern frontend development practices.
 
-## Features
+## 🔍 Project Overview
 
-- **User Authentication**: Secure email/password authentication with Supabase
-- **Stock Subscriptions**: Subscribe to up to 5 supported stocks (GOOG, TSLA, AMZN, META, NVDA)
-- **Real-time Updates**: Stock prices update every second without page refresh
-- **Multi-user Support**: Multiple users can have different subscriptions updating independently
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
+The Stock Broker Client Web Dashboard is a web-based application designed to simulate real-time stock price updates for different users. Each user can log in, subscribe to supported stocks, and observe asynchronous price changes generated dynamically on the client side.
 
-## Tech Stack
+This project focuses on frontend real-time behavior, state management, UI responsiveness, and secure authentication, without relying on live market APIs.
 
-- **Frontend**: Next.js (React)
-- **Styling**: CSS / Tailwind CSS
-- **State Management**: React Hooks
-- **Backend**: Supabase (PostgreSQL)
-- **Authentication**: Supabase Auth
-- **Real-time Logic**: JavaScript (`setInterval`)
-- **Deployment**: Vercel
+## 🎯 Key Features
 
-## Setup
+- User login using email authentication
+- Subscribe to supported stock tickers:
+  - GOOG
+  - TSLA
+  - AMZN
+  - META
+  - NVDA
+- Real-time stock price updates (every second)
+- Live UI updates without page refresh
+- Multi-user support with independent subscriptions
+- Asynchronous updates per active dashboard
+- Clean, modern, and responsive user interface
 
-- **Database Setup**:
-  - Run the SQL scripts in the `scripts` folder
-  - `001_create_subscriptions_table.sql` – Creates the subscriptions table
-  - `002_auto_confirm_users.sql` – Auto-confirms new users (development only)
+## 🧠 Project Objectives
 
-- **Environment Configuration**:
-  - Create a `.env.local` file
-  - Add:
-    ```
-    NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-    NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-    ```
+- Demonstrate real-time data handling on the client side
+- Practice state management and component-based architecture
+- Simulate stock market behavior using random price fluctuations
+- Build an interview-ready full-stack project
+- Understand asynchronous updates and UI reactivity
 
-- **Install Dependencies**:
- - `npm install`
+## 🛠️ Tech Stack
 
-- **Run the Application**:
- - `npm run dev`
+- Frontend: Next.js (React)
+- Styling: CSS / Tailwind CSS
+- State Management: React Hooks
+- Backend: Supabase (PostgreSQL + Auth)
+- Authentication: Supabase Auth
+- Real-Time Logic: JavaScript Timers (`setInterval`)
+- Deployment: Vercel
 
-- **Sign Up**:
-- Create an account using email and password
+## ⚙️ How It Works
 
-- **Start Trading**:
-- Subscribe to stocks and watch prices update in real time
+- User logs in using an email address
+- User selects one or more supported stock tickers
+- Subscriptions are stored securely in Supabase
+- Stock prices update every second using a random price generator
+- UI updates dynamically without page reload
+- Multiple users can use the app simultaneously with independent data
 
-## Supported Stocks
+## 🚀 Live Demo
 
-- GOOG (Google)
-- TSLA (Tesla)
-- AMZN (Amazon)
-- META (Meta)
-- NVDA (NVIDIA)
+Deployed Application:  
+https://stock-broker-0j-sjgk.vercel.app/dashboard
 
-## Development Note
+## 🧩 Installation & Setup
 
-- Stock prices are simulated and update every second with random fluctuations (±2%)
-- No real stock market API is used
+### Clone the Repository
+`
+git clone https://github.com/OM-MUDDAPUR/stock-broker-dashboard.git
+cd stock-broker-dashboard`
 
-## Security
 
-- Row Level Security (RLS) enabled on the subscriptions table
-- Users can only view and manage their own subscriptions
-- Authentication handled securely by Supabase
+### Install Dependencies
+`npm install`
+
+
+### Environment Variables
+
+Create a `.env.local` file and add:
+`NEXT_PUBLIC_SUPABASE_URL=your_supabase_url`
+`NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key`
+
+
+### Run the Development Server
+`npm run dev`
+
+
+## 📂 Project Structure
+`
+src/
+├── components/
+│ ├── Login.jsx
+│ ├── StockCard.jsx
+│ └── Dashboard.jsx
+├── utils/
+│ └── priceGenerator.js
+├── pages/
+│ ├── index.js
+│ └── dashboard.js
+└── styles/
+`
+
+
+## 🧪 Limitations
+
+- Uses simulated stock prices (no real market data)
+- Real-time updates are timer-based, not WebSocket-based
+- Portfolio analytics not implemented
+- Designed intentionally without external stock APIs
+
+## 🔮 Future Enhancements
+
+- Integrate real stock APIs (Alpha Vantage / Yahoo Finance)
+- WebSocket-based real-time updates
+- Stock price history and charts
+- Portfolio valuation and analytics
+- Alerts and notifications
+- Role-based user access
+
+## 📚 Learning Outcomes
+
+- Building real-time UIs using Next.js
+- Secure authentication using Supabase
+- Client–backend integration
+- Managing asynchronous state updates
+- Deploying full-stack apps on Vercel
+
+## 👨‍💻 Author
+
+Om Muddapur  
+B.E. Computer Science Engineering  
+Frontend & Full-Stack Development Enthusiast
+
+## 📜 License
+
+This project is developed for educational and demonstration purposes only.
